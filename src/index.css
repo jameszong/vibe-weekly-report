@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Linear.app inspired color scheme */
+:root {
+  --linear-bg: #fafafa;
+  --linear-surface: #ffffff;
+  --linear-border: #e5e7eb;
+  --linear-text-primary: #1f2937;
+  --linear-text-secondary: #6b7280;
+  --linear-accent: #5b5fde;
+  --linear-success: #10b981;
+  --linear-warning: #f59e0b;
+  --linear-error: #ef4444;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--linear-bg);
+  color: var(--linear-text-primary);
+}
+
+/* Custom prose styling for markdown preview */
+.prose {
+  color: var(--linear-text-primary);
+}
+
+.prose h1 {
+  color: var(--linear-text-primary);
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  color: var(--linear-text-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--linear-border);
+  padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+  color: var(--linear-text-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--linear-accent);
+  font-weight: bold;
+}
+
+.prose ol {
+  padding-left: 1.5rem;
+}
+
+.prose ol li {
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.prose code {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.prose pre {
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Checkbox styling for task lists */
+.prose input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: var(--linear-accent);
+}
+
+/* Focus states */
+textarea:focus {
+  outline: none;
+  border-color: var(--linear-accent);
+  box-shadow: 0 0 0 3px rgba(91, 95, 222, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--linear-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--linear-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
