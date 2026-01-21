@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/vibe-weekly-report/' : '/',
+  base: '/vibe-weekly-report/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
